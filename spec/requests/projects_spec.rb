@@ -13,6 +13,7 @@ RSpec.describe "Projects", type: :request do
         expect {
           post projects_path, params: { project: project_params }
         }.to change(@user.projects, :count).by(1)
+        expect(true).to be_truthy
       end
     end
 
