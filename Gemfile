@@ -62,6 +62,7 @@ group :development do
 
   gem "letter_opener_web"
   gem 'faker', require: false
+  gem 'rubocop', require: false
 end
 
 group :test do
