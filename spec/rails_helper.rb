@@ -65,4 +65,7 @@ RSpec.configure do |config|
 
   # Use Devise helpers in tests
   config.include Devise::Test::ControllerHelpers, type: :controller
+
+  # Devise のヘルパーメソッドをテスト内で使用する
+  config.include RequestSpecHelper, type: :request
 end
