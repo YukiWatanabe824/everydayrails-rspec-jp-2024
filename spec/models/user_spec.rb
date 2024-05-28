@@ -11,6 +11,11 @@ RSpec.describe User, type: :model do
     expect(user).to be_valid
   end
 
+  # 有効なファクトリを持つこと
+  it "has a valid factory" do
+    expect(FactoryBot.build(:user)).to be_valid
+  end
+
   it "is invalid without a first name" do
     user = User.new(first_name: nil)
     user.valid?
